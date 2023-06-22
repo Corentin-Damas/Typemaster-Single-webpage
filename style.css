@@ -1,0 +1,336 @@
+/*
+
+font-family: 'Barlow', sans-serif;
+font-weight: 500, 900
+
+/// MEDIA QUERY SELECTOR
+
+1368px = 85.5em  Design Break
+
+1000px = 62,5em   Design Breakpoint
+900px = 56.25em   Landscape Tablet 
+750px = 46,875em  Design Breakpoint
+650px = 40,625em  Design Breakpoint & Tablet portrait
+560px = 35em  Mobile 
+
+@media only screen and (max-width: 85.5em) {}
+@media only screen and (max-width: 62.5em) {}
+@media only screen and (max-width: 56.25em) {} 
+@media only screen and (max-width: 46.875em) {} 
+@media only screen and (max-width: 40.625em) {} 
+@media only screen and (max-width: 34.375em) {} 
+
+*/
+
+:root {
+  --m-orange-1: rgb(241, 103, 24);
+  --m-orange-2: rgb(255, 155, 98);
+  --m-blue: rgb(22, 37, 66);
+  --n-grey-1: rgb(123, 139, 173);
+  --n-grey-2: rgb(232, 239, 242);
+  --n-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: 85.5em) {
+    font-size: 60%;
+  }
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+  margin: 6rem 16rem;
+  max-width: 100vw;
+
+  @media only screen and (max-width: 85.5em) {
+    margin: 6rem 8rem;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.img {
+  border-radius: 3rem;
+}
+
+/*//////////////////////////////////////*/
+/* TYPOGRAPHY */
+
+.heading-1 {
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--m-blue);
+}
+.heading-2 {
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--m-blue);
+}
+.heading-3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--m-blue);
+}
+p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 500;
+  color: var(--n-grey-1);
+}
+
+/*//////////////////////////////////////*/
+/* UTILITIES */
+
+.u-bold {
+  font-weight: 900;
+}
+
+.u-marg-inline-s {
+  margin-inline: 2rem;
+}
+
+/*//////////////////////////////////////*/
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+/*//////////////////////////////////////*/
+/* CTA */
+.cta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.bg-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0rem;
+  width: 14rem;
+  transform: translateX(16rem);
+  height: 20%;
+  background-color: var(--n-grey-2);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  @media only screen and (max-width: 85.5em) {
+    width: 6rem;
+    transform: translateX(8rem);
+  }
+}
+
+/* .cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0rem;
+  max-width: 14rem;
+  transform: translateX(16rem);
+  height: 50%;
+  background-color: var(--n-grey-2);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  @media only screen and (max-width: 85.5em) {
+    width: 6rem;
+    transform: translateX(8rem);
+  }
+} */
+
+.cta__text {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  width: 75%;
+  gap: 3rem;
+}
+
+.cta-release {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
+  color: var(--n-grey-1);
+  letter-spacing: 0.1rem;
+}
+
+.cta__img {
+  border-radius: 2rem;
+}
+
+/*//////////////////////////////////////*/
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 20% 45% 35%;
+  gap: 2rem;
+  position: relative;
+  margin-bottom: 14vh;
+  width: 100%;
+
+  @media only screen and (max-width: 85.5em) {
+    grid-template-columns: 20% 40% 30%;
+  }
+}
+
+.hero::after {
+  content: "";
+  bottom: 0;
+  left: 0rem;
+  width: 14rem;
+  transform: translateX(-16rem);
+  height: 50%;
+  position: absolute;
+  background-color: var(--n-grey-2);
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  @media only screen and (max-width: 85.5em) {
+    width: 6rem;
+    transform: translateX(8rem);
+  }
+}
+
+.img-orange {
+  background-image: url(assets/desktop/image-phone-and-keyboard.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-orange::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--m-orange-1);
+  mix-blend-mode: multiply;
+}
+
+.hero__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 60%;
+  gap: 3rem;
+}
+
+/*//////////////////////////////////////*/
+/* CAPACITY */
+
+.capacity {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.capacity-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.capacity__icon {
+  background-color: var(--m-orange-1);
+  padding: 1.5rem;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+
+.capacity__icon-img {
+  max-height: 3rem;
+}
+
+/*//////////////////////////////////////*/
+/* FOOTER */
+
+.footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*//////////////////////////////////////*/
+/* BTN */
+.btn {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  color: var(--n-grey-1);
+  letter-spacing: 0.1rem;
+  transition: all 0.2s;
+}
+
+.btn-grey {
+  color: var(--m-blue);
+  background-color: var(--n-grey-2);
+}
+.btn-grey:hover {
+  color: var(--n-white);
+  background-color: var(--m-blue);
+}
+
+.btn-orange {
+  color: var(--n-white);
+  background-color: var(--m-orange-1);
+}
+
+.btn-orange:hover {
+  color: var(--n-white);
+  background-color: var(--m-orange-1);
+}
+
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(2, 0, 0, 0.096);
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0px);
+}
