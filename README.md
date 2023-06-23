@@ -10,7 +10,7 @@ This is a solution to the [Typemaster pre-launch landing page challenge on Front
 
 ### Links
 
-- Solution URL: [](https://corentin-damas.github.io/Typemaster-Single-webpage/)
+- Solution URL: [My solution](https://corentin-damas.github.io/Typemaster-Single-webpage/)
 
 ## The challenge
 
