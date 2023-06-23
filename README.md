@@ -6,9 +6,11 @@ This is a solution to the [Typemaster pre-launch landing page challenge on Front
 
 ### My Solution
 
+![My solution quick preview](./screenshots/result-preview.jpg)
+
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [](https://corentin-damas.github.io/Typemaster-Single-webpage/)
 
 ## The challenge
 
